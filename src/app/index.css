@@ -1,0 +1,80 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --shadow-rounded: "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+}
+
+/* HeroCards background shadow */
+.shadow {
+  position: absolute;
+  background: oklch(66.7% 0.295 322.15);
+  border-radius: 24px;
+  rotate: 35deg;
+  z-index: -1;
+  width: 260px;
+  top: 200px;
+  height: 400px;
+  filter: blur(150px);
+  will-change: transform;
+  animation: shadow-slide infinite 4s linear alternate;
+}
+
+@keyframes shadow-slide {
+  from {
+    background: oklch(74% 0.238 322.16 / 0.2);
+    right: 460px;
+  }
+
+  to {
+    background: oklch(74% 0.238 322.16 / 0.8);
+    right: 160px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .shadow {
+    top: 70px;
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: oklch(74% 0.238 322.16 / 0.2);
+      right: 460px;
+    }
+
+    to {
+      background: oklch(74% 0.238 322.16 / 0.5);
+      right: 160px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .shadow {
+    top: 70px;
+    width: 100px;
+    height: 350px;
+    filter: blur(60px);
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: oklch(74% 0.238 322.16 / 0.2);
+      right: 280px;
+    }
+
+    to {
+      background: oklch(74% 0.238 322.16 / 0.3);
+      right: 100px;
+    }
+  }
+}
+
+.hero-section {
+  background-image: url(../assets/BANNER.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
