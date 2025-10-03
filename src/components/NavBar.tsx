@@ -13,8 +13,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChalkboardUser, FaUser } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import { LogoIcon } from "./Icons";
 import { Button, buttonVariants } from "./ui/button";
 interface RouteProps {
@@ -23,6 +24,10 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
+  {
+    href: "#home",
+    label: "Início",
+  },
   {
     href: "#features",
     label: "Ferramentas",
@@ -42,9 +47,40 @@ const routeList: RouteProps[] = [
 ];
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  useEffect(() => {
+    const sections = routeList.map((route) =>
+      document.querySelector(route.href)
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
-    <header className="sticky border-b-[1px] dark:bg-[#2E293B] border-zinc-200 top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header className="fixed border-b-[1px] dark:bg-[#2E293B] border-zinc-200 top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
@@ -85,8 +121,7 @@ export const Navbar = () => {
                     <a
                       rel="noreferrer noopener"
                       key={label}
-                      href={href}
-                      onClick={() => setIsOpen(false)}
+                      href={`/${href}`}
                       className={`text-[17px] ${buttonVariants({ variant: "ghost" })}`}
                     >
                       {label}
@@ -137,16 +172,19 @@ export const Navbar = () => {
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
-              <a
-                rel="noreferrer noopener"
-                href={route.href}
-                key={i}
-                className={`text-[14px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
-              >
-                {route.label}
-              </a>
+              <div>
+                <a
+                  rel="noreferrer noopener"
+                  href={`/${route.href}`}
+                  key={i}
+                  className={`text-[14px] ${buttonVariants({
+                    variant: "ghost",
+                  })}`}
+                >
+                  {route.label}
+                </a>
+                {activeSection === route.href ? <div className="border-b-2 border-b-fuchsia-400!" /> : ""}
+              </div>
             ))}
           </nav>
 

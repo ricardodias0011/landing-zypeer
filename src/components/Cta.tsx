@@ -17,7 +17,8 @@ export const Cta = () => {
             A Zypeer é um app que auxilia estudantes e professores. Estudantes têm acesso a ferramentas de IA personalizadas, simulados e organização de estudos. Já os professores, além das ferramentas, podem criar atividades impressas.
           </p>
         </div>
-        <img src={WebSystem} alt="web system" className="w-full max-w-[860px]" />
+        <img src={WebSystem} alt="web system" className="w-full max-w-[860px]" data-aos="fade-up"
+          data-aos-anchor-placement="top-center" />
         {/* <div className="space-y-4 lg:col-start-2">
           <Button className="w-full md:mr-4 md:w-auto" onClick={() => {
             const ua = navigator.userAgent || navigator.vendor;

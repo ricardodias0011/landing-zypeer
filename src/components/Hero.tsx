@@ -4,9 +4,9 @@ import { HeroCards } from "./HeroCards";
 import { Button } from "./ui/button";
 export const Hero = () => {
   return (
-    <div className="hero-section h-fit md:h-min-[100vh] w-full flex items-center justify-center">
-      <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10 px-4">
-        <div className="text-center lg:text-start space-y-6">
+    <div className="mt-[40px] hero-section h-fit md:h-min-[100vh] w-full flex items-center justify-center" id="home">
+      <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10 px-4  w-full">
+        <div className="text-center lg:text-start space-y-6  w-full" data-aos="fade-right">
           <main className="text-5xl md:text-6xl font-bold">
             <img src={Logo} alt="Zypeer Logo" width={200} className="hidden md:block" />
             <h1 className="inline bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text">
@@ -28,25 +28,11 @@ export const Hero = () => {
 
           <div className="space-y-4 md:space-y-0 md:space-x-2 flex flex-row gap-1 flex-wrap">
             <Button
-              className="w-full md:w-1/3 text-md py-3 h-11"
+              className="w-full md:w-1/3 text-md py-3 h-11 shadow-[0px_0px_30px_0px_#ED6AFF85] hover:shadow-[0px_0px_40px_0px_#ED6AFF85] transition-shadow duration-300 ease-in-out"
               onClick={() => {
-                const ua = navigator.userAgent || navigator.vendor;
-                const isIOS = /iPad|iPhone|iPod/.test(ua) && !(window as any).MSStream;
-                if (isIOS) {
-                  window.open(
-                    "https://edu.zypeer.com.br/app/simulated?page=explore",
-                    "_blank"
-                  );
-                }
-                else {
-                  window.open("https://play.google.com/store/apps/details?id=com.zypeertech.zypeeredu", "_blank")
-                }
-              }}
-              style={{
-                boxShadow: '0px 0px 30px 0px #ED6AFF85'
+                window.open("https://prof.zypeer.com.br", "_blank")
               }}
             >
-
               Testar Grátis
             </Button>
             <div className="rounded-full w-full md:w-1/3" style={{
@@ -68,7 +54,7 @@ export const Hero = () => {
         </div>
 
         {/* Hero cards sections */}
-        <div className="z-10">
+        <div className="z-10" data-aos="fade-left">
           <HeroCards />
         </div>
       </section>

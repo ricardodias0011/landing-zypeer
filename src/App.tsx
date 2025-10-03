@@ -1,9 +1,14 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Home from './pages/home'
-import { default as LiabilityPolicyPage, default as PrivacyPolicyPage } from './pages/liability-policy/page'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Home from './pages/home';
+import { default as LiabilityPolicyPage, default as PrivacyPolicyPage } from './pages/liability-policy/page';
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
   return (
     <BrowserRouter>
       <div className="dark:bg-black dark:text-white flex flex-col items-center w-full overflow-x-hidden">

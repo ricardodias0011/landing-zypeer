@@ -1,5 +1,7 @@
-import image4 from "../assets/screens/resume.jpg";
+import image5 from "../assets/screens/apps.png";
+import image4 from "../assets/screens/chat.png";
 import image1 from "../assets/screens/simulateds.jpg";
+import image6 from "../assets/screens/slides.png";
 import image2 from "../assets/screens/spaces.jpg";
 import image3 from "../assets/screens/tasks.jpg";
 
@@ -24,6 +26,24 @@ const features: FeatureProps[] = [
     image: image1,
   },
   {
+    title: "Ferramentas IA",
+    description:
+      "Plano de aula/estudo, Correção de questões, Gerar imagem, Mapa mental e Muito mais.",
+    image: image5,
+  },
+  {
+    title: "Slides",
+    description:
+      "Desenvolva apresentações em segundos com a nossa Inteligência Artificial.",
+    image: image6,
+  },
+  {
+    title: "Chat",
+    description:
+      "Chat com 8 IAs personalizados para te ajudar nas suas atividades diárias.",
+    image: image4,
+  },
+  {
     title: "Espaços",
     description:
       "Crie espaços de estudo, salve seus materiais e compartilhe com facilidade.",
@@ -34,13 +54,7 @@ const features: FeatureProps[] = [
     description:
       "Crie tarefas To-Do com IA, otimizando seu aprendizado ou ensino.",
     image: image3,
-  },
-  {
-    title: "Resumos",
-    description:
-      "Crie tarefas To-Do com IA, otimizando seu aprendizado ou ensino.",
-    image: image4,
-  },
+  }
 ];
 
 const featureList: string[] = [
@@ -60,6 +74,8 @@ export const Features = () => {
     <section
       id="features"
       className="container py-24 sm:py-32 space-y-8  px-4 md:px-8"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
     >
       <h2 className="text-3xl lg:text-4xl font-bold">
         Nossas {" "}
@@ -85,12 +101,16 @@ export const Features = () => {
         ))}
       </div> */}
 
-      <div className="flex md:hidden ">
-        <Swiper navigation={true} modules={[Navigation]}>
+      <div className="flex w-full">
+        <Swiper
+          slidesPerView={"auto"}
+          navigation={true}
+          spaceBetween={1}
+          modules={[Navigation]}>
           {features.map(({ title, description, image }: FeatureProps) => (
-            <SwiperSlide>
+            <SwiperSlide className="max-w-[350px] p-3">
               <div
-                className="min-h-[600px] w-full border border-fuchsia-400 rounded-xl relative overflow-hidden">
+                className="min-h-[600px] w-full border border-fuchsia-400 rounded-xl relative overflow-hidden max-w-[350px]  hover:shadow-[0px_0px_20px_0px_#ED6AFF85] transition-shadow duration-300 ease-in-out">
                 <div className="absolute bottom-10 w-full z-30 flex flex-col items-center justify-center gap-2 px-4">
                   <h3 className="inline bg-gradient-to-b from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-center text-3xl font-bold">
                     {title}
@@ -113,7 +133,7 @@ export const Features = () => {
           ))}
         </Swiper>
       </div>
-
+      {/* 
       <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {features.map(({ title, description, image }: FeatureProps) => (
           <div
@@ -137,7 +157,7 @@ export const Features = () => {
             />
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

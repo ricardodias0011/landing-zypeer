@@ -1,7 +1,7 @@
 const LiabilityPolicy = () => {
     return (
         <div>
-            <section className="max-w-4xl mx-auto px-6 py-12">
+            <section className="max-w-4xl mx-auto px-6 py-12 mt-10">
                 <h1 className="text-4xl font-bold text-center mb-10">Termo de responsabilidade</h1>
                 <p className="text-sm mb-6">Última atualização: 17/05/2025</p>
                 <p className="mb-6">

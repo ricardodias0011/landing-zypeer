@@ -101,9 +101,13 @@ export const Pricing = () => {
           Confira nossos planos que cabem no seu bolso.
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pricingList.map((pricing: PricingProps) => (
+          {pricingList.map((pricing: PricingProps, i) => (
             <div
               key={pricing.title}
+              data-aos={
+                i === 1 ? "fade-up" : i === 0 ? "fade-right" : "fade-left"
+              }
+              // data-aos-anchor-placement="top-center"
               className={
                 (pricing.popular === PopularPlanType.YES
                   ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 bg-[#1A1A1A]"

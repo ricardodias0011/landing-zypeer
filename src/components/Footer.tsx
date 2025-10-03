@@ -8,8 +8,9 @@ import { FaInstagram, FaTiktok } from "react-icons/fa6";
 
 export const Footer = () => {
   return (
-    <div className="w-full flex items-center justify-center footer pt-20">
-      <footer id="footer" className="container">
+    <div className="w-full flex items-center justify-center footer pt-20"
+    >
+      <footer id="footer" className="container" >
         <div className="flex w-full items-center justify-center">
           <a
             rel="noreferrer noopener"
@@ -19,7 +20,7 @@ export const Footer = () => {
             <img src={Logo} alt="Logo" className="lucide lucide-panels-top-left mr-2 w-50 mt-1" />
           </a>
         </div>
-        <section className="container py-20 flex flex-row flex-wrap justify-start md:justify-center gap-30 px-4">
+        <section className="container py-20 flex flex-row flex-wrap justify-start md:justify-center gap-30 px-4" >
           <div className="flex flex-col gap-2">
             <h3 className="inline bg-gradient-to-b from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-3xl font-bold">
               Siga-nos
