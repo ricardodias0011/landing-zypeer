@@ -1,14 +1,14 @@
 'use client';
 import Logo from "@/assets/LOGO.png";
-import Image from "next/image";
 import { Button } from "./ui/button";
+import { HeroCards } from "./HeroCards";
 export const Hero = () => {
   return (
-    <div className="hero-section w-full flex items-center justify-center">
+    <div className="hero-section h-fit md:h-min-[100vh] w-full flex items-center justify-center">
       <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10 px-4">
         <div className="text-center lg:text-start space-y-6">
           <main className="text-5xl md:text-6xl font-bold">
-            <Image src={Logo} alt="Zypeer Logo" width={200} />
+            <img src={Logo} alt="Zypeer Logo" width={200} className="hidden md:block" />
             <h1 className="inline bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text">
               Aprendizado
             </h1>{" "}
@@ -26,7 +26,7 @@ export const Hero = () => {
             personaliza seu aprendizado e transforma o ensino!
           </p>
 
-          <div className="space-y-4 md:space-y-0 md:space-x-2 flex flex-row gap-1">
+          <div className="space-y-4 md:space-y-0 md:space-x-2 flex flex-row gap-1 flex-wrap">
             <Button
               className="w-full md:w-1/3 text-md py-3 h-11"
               onClick={() => {
@@ -49,7 +49,7 @@ export const Hero = () => {
 
               Testar Grátis
             </Button>
-            <div className="rounded-full" style={{
+            <div className="rounded-full w-full md:w-1/3" style={{
               background: 'linear-gradient(180deg, #EC75FF 64.9%, #C8A6FF 100%)',
               padding: 1
             }}>
@@ -68,11 +68,8 @@ export const Hero = () => {
 
         {/* Hero cards sections */}
         <div className="z-10">
-          {/* <HeroCards /> */}
+          <HeroCards />
         </div>
-
-        {/* Shadow effect */}
-        <div className="shadow"></div>
       </section>
     </div>
   );

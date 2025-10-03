@@ -6,44 +6,48 @@ html {
   --shadow-rounded: "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
 }
 
-/* HeroCards background shadow */
-.shadow {
+.shadow-effect {
   position: absolute;
-  background: #DC1CFC60;
+  background: #DC1CFC;
   border-radius: 24px;
   rotate: 35deg;
-  z-index: -1;
-  width: 300px;
+  z-index: 0;
+  width: 350px;
   top: 200px;
-  height: 400px;
+  height: 450px;
   filter: blur(200px);
   will-change: transform;
-  animation: shadow-slide infinite 4s linear alternate;
+  animation: shadow-slide infinite 3s ease-in-out alternate;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #DC1CFC !important;
 }
 
 @keyframes shadow-slide {
   from {
-    right: 200px;
+    right: 250px;
   }
 
   to {
-    right: 160px;
+    right: 100px;
   }
 }
 
 @media (max-width: 1024px) {
-  .shadow {
+  .shadow-effect {
     top: 70px;
   }
 
   @keyframes shadow-slide {
     from {
-      background: oklch(74% 0.238 322.16 / 0.2);
+      background: #ed6bff;
       right: 460px;
     }
 
     to {
-      background: oklch(74% 0.238 322.16 / 0.5);
+      background: #ed6bff;
       right: 160px;
     }
   }
@@ -59,28 +63,27 @@ html {
 
   @keyframes shadow-slide {
     from {
-      background: oklch(74% 0.238 322.16 / 0.2);
+      background: #ed6bff33;
       right: 280px;
     }
 
     to {
-      background: oklch(74% 0.238 322.16 / 0.3);
+      background: #ed6bff4d;
       right: 100px;
     }
   }
 }
 
 .hero-section {
-  background-image: url(../assets/BANNER.png);
+  background-image: url(./assets/BANNER.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
 }
 
 .dashboard-section {
   background:
-    url("../assets/lines-bg.png") no-repeat center/cover,
-    url("../assets/Union.svg") no-repeat center/contain,
+    url("./assets/lines-bg.png") no-repeat center/cover,
+    url("./assets/Union.svg") no-repeat center/contain,
     linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     linear-gradient(180deg, #D050E2 0%, #ED6AFF 100%);
   height: fit-content;
@@ -88,18 +91,16 @@ html {
 
 .section-price {
   background:
-    url("../assets/icon-z.png") no-repeat left,
-    url("../assets/icon-z.png") no-repeat right;
+    url("./assets/icon-z.png") no-repeat left,
+    url("./assets/icon-z.png") no-repeat right;
   background-size: 300px, 800px;
-  /* primeira imagem 80px, segunda 40px */
 }
 
 @media (max-width: 768px) {
   .section-price {
     background:
-      url("../assets/icon-z.png") no-repeat left;
+      url("./assets/icon-z.png") no-repeat left;
     background-size: 100%;
-    /* primeira imagem 80px, segunda 40px */
   }
 
 }

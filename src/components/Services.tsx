@@ -1,7 +1,5 @@
-'use client';
 
-import Image from "next/image";
-import { JSX } from "react";
+import type { JSX } from "react";
 import mobile from "../assets/mobile.png";
 import { ChartIcon, MagnifierIcon, WalletIcon } from "./Icons";
 import { useTheme } from "./theme-provider";
@@ -36,11 +34,10 @@ const serviceList: ServiceProps[] = [
 ];
 
 export const Services = () => {
-  const { theme } = useTheme();
   return (
     <section id="app-mobile" className="relative container py-24 sm:py-32 flex px-8">
-      <div className="shadow" />
-      <div className="flex flex-row gap-10 justify-center md:justify-between items-center flex-wrap w-full">
+      <div className="shadow-effect" />
+      <div className="flex flex-row gap-10 justify-center md:justify-between items-center flex-wrap w-full z-10">
         <div className="flex flex-col md:basis-1/2 w-full">
           <h3 className="inline bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-4xl font-bold">
             Aplicativo moderno
@@ -84,7 +81,7 @@ export const Services = () => {
           </Button> */}
         </div>
 
-        <Image
+        <img
           src={mobile as unknown as any}
           className="w-[300px] md:w-[400px] lg:w-[400px] object-contain rounded-lg"
           alt="About services"

@@ -1,15 +1,18 @@
-'use client';
-
-import Image, { StaticImageData } from "next/image";
 import image4 from "../assets/screens/resume.jpg";
 import image1 from "../assets/screens/simulateds.jpg";
 import image2 from "../assets/screens/spaces.jpg";
 import image3 from "../assets/screens/tasks.jpg";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 interface FeatureProps {
   title: string;
   description: string;
-  image: StaticImageData;
+  image: any;
 }
 
 const features: FeatureProps[] = [
@@ -81,7 +84,36 @@ export const Features = () => {
         ))}
       </div> */}
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="flex md:hidden ">
+        <Swiper navigation={true} modules={[Navigation]}>
+          {features.map(({ title, description, image }: FeatureProps) => (
+            <SwiperSlide>
+              <div
+                className="min-h-[600px] w-full border border-fuchsia-400 rounded-xl relative overflow-hidden">
+                <div className="absolute bottom-10 w-full z-30 flex flex-col items-center justify-center gap-2 px-4">
+                  <h3 className="inline bg-gradient-to-b from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-center text-3xl font-bold">
+                    {title}
+                  </h3>
+                  <p className="text-center">{description}</p>
+                </div>
+                <div
+                  className="absolute w-full h-full z-20"
+                  style={{
+                    background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.80) 77.59%)"
+                  }}
+                />
+                <img
+                  src={image}
+                  alt="About feature"
+                  className="w-full h-full absolute object-cover rounded-lg opacity-20"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {features.map(({ title, description, image }: FeatureProps) => (
           <div
             className="min-h-[600px] w-full border border-fuchsia-400 rounded-xl relative overflow-hidden">
@@ -97,7 +129,7 @@ export const Features = () => {
                 background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.80) 77.59%)"
               }}
             />
-            <Image
+            <img
               src={image}
               alt="About feature"
               className="w-full h-full absolute object-cover rounded-lg opacity-20"

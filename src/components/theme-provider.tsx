@@ -31,7 +31,7 @@ export function ThemeProvider({
   const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    setTheme("dark")
+    setTheme("dark");
   }, [])
 
   useEffect(() => {

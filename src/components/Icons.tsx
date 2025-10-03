@@ -1,13 +1,12 @@
 'use client';
 
 import Logo from "@/assets/LOGO.png";
-import Image from "next/image";
 import { useTheme } from "./theme-provider";
 
 export const LogoIcon = () => {
   const { theme } = useTheme();
   return (
-    <Image src={(theme === "dark" ? Logo : Logo)} alt="Logo" className="lucide lucide-panels-top-left mr-2 w-30 mt-1" />
+    <img src={(theme === "dark" ? Logo : Logo)} alt="Logo" className="lucide lucide-panels-top-left mr-2 w-30 mt-1" />
   );
 };
 

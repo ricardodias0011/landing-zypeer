@@ -9,7 +9,6 @@ import {
   CardFooter,
   CardHeader
 } from "@/components/ui/card";
-import Image from "next/image";
 
 enum PopularPlanType {
   NO = 0,
@@ -148,7 +147,7 @@ export const Pricing = () => {
                       key={benefit}
                       className="flex"
                     >
-                      <Image src={Check} alt="Check" />{" "}
+                      <img src={Check} alt="Check" />{" "}
                       <h3 className="ml-2">{benefit}</h3>
                     </span>
                   ))}
