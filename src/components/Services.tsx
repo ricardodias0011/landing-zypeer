@@ -5,7 +5,6 @@ import { JSX } from "react";
 import mobile from "../assets/mobile.png";
 import { ChartIcon, MagnifierIcon, WalletIcon } from "./Icons";
 import { useTheme } from "./theme-provider";
-import { Button } from "./ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 interface ServiceProps {
@@ -27,6 +26,7 @@ const serviceList: ServiceProps[] = [
       "Foi criado para ser fácil, simples e acessível, proporcionando uma experiência sem complicações e ao seu alcance.",
     icon: <WalletIcon />,
   },
+
   {
     title: "Tarefas automatizadas",
     description:
@@ -38,8 +38,9 @@ const serviceList: ServiceProps[] = [
 export const Services = () => {
   const { theme } = useTheme();
   return (
-    <section id="app-mobile" className="container py-24 sm:py-32 flex  px-8">
-      <div className="flex flex-row gap-10 justify-center flex-wrap w-full">
+    <section id="app-mobile" className="relative container py-24 sm:py-32 flex px-8">
+      <div className="shadow" />
+      <div className="flex flex-row gap-10 justify-center md:justify-between items-center flex-wrap w-full">
         <div className="flex flex-col md:basis-1/2 w-full">
           <h3 className="inline bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-4xl font-bold">
             Aplicativo moderno
@@ -65,7 +66,7 @@ export const Services = () => {
               </Card>
             ))}
           </div>
-          <Button className="w-full md:mr-4 md:w-auto mt-8" onClick={() => {
+          {/* <Button className="w-full md:mr-4 md:w-auto mt-8" onClick={() => {
             const ua = navigator.userAgent || navigator.vendor;
 
             const isIOS = /iPad|iPhone|iPod/.test(ua) && !(window as any).MSStream;
@@ -80,7 +81,7 @@ export const Services = () => {
             }
           }}>
             Baixe de graça ✨
-          </Button>
+          </Button> */}
         </div>
 
         <Image

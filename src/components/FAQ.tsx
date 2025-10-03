@@ -64,13 +64,14 @@ export const FAQ = () => {
       id="faq"
       className="container py-24 sm:py-32  px-8"
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">
-        Perguntas{" "}
-        <span className="bg-gradient-to-bl from-fuchsia-400/60 to-fuchsia-400 text-transparent bg-clip-text">
-          Frequentes
-        </span>
-      </h2>
-
+      <div className="flex items-center justify-center gap-4 mb-4 flex-wrap">
+        <h2 className="text-3xl md:text-4xl font-bold p-4 bg-[#EC75FF50] rounded-2xl opacity-70 border-1 border-fuchsia-400">
+          FAQ
+        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold">
+          Perguntas Frequentes Sobre a Zypeer
+        </h2>
+      </div>
       <Accordion
         type="single"
         collapsible
@@ -81,10 +82,9 @@ export const FAQ = () => {
             key={value}
             value={value}
           >
-            <AccordionTrigger className="text-left">
+            <AccordionTrigger className="text-left bg-[#1a1a1a] px-4 my-2 rounded-2xl">
               {question}
             </AccordionTrigger>
-
             <AccordionContent>{answer}</AccordionContent>
           </AccordionItem>
         ))}

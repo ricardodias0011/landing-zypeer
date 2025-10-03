@@ -9,26 +9,24 @@ html {
 /* HeroCards background shadow */
 .shadow {
   position: absolute;
-  background: oklch(66.7% 0.295 322.15);
+  background: #DC1CFC60;
   border-radius: 24px;
   rotate: 35deg;
   z-index: -1;
-  width: 260px;
+  width: 300px;
   top: 200px;
   height: 400px;
-  filter: blur(150px);
+  filter: blur(200px);
   will-change: transform;
   animation: shadow-slide infinite 4s linear alternate;
 }
 
 @keyframes shadow-slide {
   from {
-    background: oklch(74% 0.238 322.16 / 0.2);
-    right: 460px;
+    right: 200px;
   }
 
   to {
-    background: oklch(74% 0.238 322.16 / 0.8);
     right: 160px;
   }
 }
@@ -77,4 +75,31 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+}
+
+.dashboard-section {
+  background:
+    url("../assets/lines-bg.png") no-repeat center/cover,
+    url("../assets/Union.svg") no-repeat center/contain,
+    linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(180deg, #D050E2 0%, #ED6AFF 100%);
+  height: fit-content;
+}
+
+.section-price {
+  background:
+    url("../assets/icon-z.png") no-repeat left,
+    url("../assets/icon-z.png") no-repeat right;
+  background-size: 300px, 800px;
+  /* primeira imagem 80px, segunda 40px */
+}
+
+@media (max-width: 768px) {
+  .section-price {
+    background:
+      url("../assets/icon-z.png") no-repeat left;
+    background-size: 100%;
+    /* primeira imagem 80px, segunda 40px */
+  }
+
 }
