@@ -1,4 +1,4 @@
-'use client';
+
 
 import WebSystem from "@/assets/web-system.png";
 
@@ -6,7 +6,7 @@ export const Cta = () => {
   return (
     <section
       id="cta"
-      className="py-16 my-24 sm:my-32  px-8 dark:bg-neutral-900 bg-neutral-100  w-full flex justify-center dashboard-section"
+      className="py-16 my-24 sm:my-32  px-4 md:px-8 dark:bg-neutral-900 bg-neutral-100  w-full flex justify-center dashboard-section"
     >
       <div className="container flex justify-center items-center flex-col">
         <div className="w-full md:max-w-[980px]">

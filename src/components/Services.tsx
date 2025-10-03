@@ -2,7 +2,6 @@
 import type { JSX } from "react";
 import mobile from "../assets/mobile.png";
 import { ChartIcon, MagnifierIcon, WalletIcon } from "./Icons";
-import { useTheme } from "./theme-provider";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 interface ServiceProps {
@@ -35,7 +34,7 @@ const serviceList: ServiceProps[] = [
 
 export const Services = () => {
   return (
-    <section id="app-mobile" className="relative container py-24 sm:py-32 flex px-8">
+    <section id="app-mobile" className="relative container py-24 sm:py-32 flex px-4 md:px-8">
       <div className="shadow-effect" />
       <div className="flex flex-row gap-10 justify-center md:justify-between items-center flex-wrap w-full z-10">
         <div className="flex flex-col md:basis-1/2 w-full">

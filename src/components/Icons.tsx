@@ -1,4 +1,4 @@
-'use client';
+
 
 import Logo from "@/assets/LOGO.png";
 import { useTheme } from "./theme-provider";

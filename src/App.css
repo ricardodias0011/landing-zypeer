@@ -22,7 +22,16 @@ html {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #DC1CFC !important;
+  background: linear-gradient(180deg, #EC75FF 64.9%, #C8A6FF 100%);
+  height: 45px !important;
+  width: 45px !important;
+  color: black !important;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 @keyframes shadow-slide {

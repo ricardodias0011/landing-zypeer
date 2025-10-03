@@ -1,7 +1,7 @@
-'use client';
+
 import Logo from "@/assets/LOGO.png";
-import { Button } from "./ui/button";
 import { HeroCards } from "./HeroCards";
+import { Button } from "./ui/button";
 export const Hero = () => {
   return (
     <div className="hero-section h-fit md:h-min-[100vh] w-full flex items-center justify-center">
@@ -51,7 +51,8 @@ export const Hero = () => {
             </Button>
             <div className="rounded-full w-full md:w-1/3" style={{
               background: 'linear-gradient(180deg, #EC75FF 64.9%, #C8A6FF 100%)',
-              padding: 1
+              padding: 1,
+              minWidth: 252
             }}>
               <a
                 href="#features"

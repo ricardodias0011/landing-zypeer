@@ -1,4 +1,4 @@
-'use client';
+
 
 import {
   NavigationMenu,
@@ -51,7 +51,7 @@ export const Navbar = () => {
             <a
               rel="noreferrer noopener"
               href="/"
-              className="ml-2 font-bold text-xl flex"
+              className="ml-2 font-bold text-xl flex "
             >
               <LogoIcon />
             </a>
@@ -67,7 +67,7 @@ export const Navbar = () => {
             >
               <SheetTrigger className="px-2">
                 <Menu
-                  className="flex md:hidden h-5 w-5"
+                  className="flex md:hidden h-5 w-5 text-white"
                   onClick={() => setIsOpen(true)}
                 >
                   <span className="sr-only">Menu Icon</span>
@@ -76,11 +76,11 @@ export const Navbar = () => {
 
               <SheetContent side={"left"}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
+                  <SheetTitle className="font-bold text-xl text-white">
                     Zypeer
                   </SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+                <nav className="flex flex-col justify-center items-center gap-2 mt-4 text-white">
                   {routeList.map(({ href, label }: RouteProps) => (
                     <a
                       rel="noreferrer noopener"
@@ -94,17 +94,23 @@ export const Navbar = () => {
                   ))}
                 </nav>
                 <div className="flex flex-col gap-2 mt-4">
-                  <a
+                  <Button
                     rel="noreferrer noopener"
-                    href="https://edu.zypeer.com.br"
-                    target="_blank"
-                    className={`border  ${buttonVariants({ variant: "secondary" })}`}
+                    // target="_blank"
+                    onClick={() => {
+                      window.open("https://prof.zypeer.com.br", "_blank")
+                    }}
+                    className={`flex gap-2 items-center flex-row${buttonVariants({ variant: "default" })}`}
+                    style={{ minWidth: 120 }}
                   >
-                    {/* <GitHubLogoIcon className="mr-2 w-5 h-5" /> */}
-                    Professores
-                  </a>
-                  <a
+                    <FaChalkboardUser size={20} />
+                    <p>Professores</p>
+                  </Button>
+                  <Button
                     rel="noreferrer noopener"
+                    // href="https://edu.zypeer.com.br"
+                    className={`flex gap-2 items-center flex-row rounded-full! border-gray-500! bg-[#393F5466]! ${buttonVariants({ variant: "outline" })}`}
+                    style={{ minWidth: 130 }}
                     onClick={() => {
                       const ua = navigator.userAgent || navigator.vendor;
 
@@ -119,12 +125,10 @@ export const Navbar = () => {
                         window.open("https://play.google.com/store/apps/details?id=com.zypeertech.zypeeredu", "_blank")
                       }
                     }}
-                    target="_blank"
-                    className={`border ${buttonVariants({ variant: "ghost" })}`}
                   >
-                    {/* <GitHubLogoIcon className="mr-2 w-5 h-5" /> */}
-                    Estudar
-                  </a>
+                    <FaUser size={16} />
+                    <p>Alunos</p>
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
@@ -153,13 +157,6 @@ export const Navbar = () => {
               // href="https://edu.zypeer.com.br"
               className={`flex gap-2 items-center flex-row rounded-full! border-gray-500! bg-[#393F5466]! ${buttonVariants({ variant: "outline" })}`}
               style={{ minWidth: 130 }}
-            >
-              <FaUser size={16} />
-              <p>Alunos</p>
-
-            </Button>
-            <Button
-              rel="noreferrer noopener"
               onClick={() => {
                 const ua = navigator.userAgent || navigator.vendor;
 
@@ -174,7 +171,16 @@ export const Navbar = () => {
                   window.open("https://play.google.com/store/apps/details?id=com.zypeertech.zypeeredu", "_blank")
                 }
               }}
+            >
+              <FaUser size={16} />
+              <p>Alunos</p>
+            </Button>
+            <Button
+              rel="noreferrer noopener"
               // target="_blank"
+              onClick={() => {
+                window.open("https://prof.zypeer.com.br", "_blank")
+              }}
               className={`flex gap-2 items-center flex-row${buttonVariants({ variant: "default" })}`}
               style={{ minWidth: 120 }}
             >

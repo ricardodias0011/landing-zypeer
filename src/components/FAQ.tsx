@@ -1,4 +1,4 @@
-'use client';
+
 
 
 import {
@@ -62,13 +62,13 @@ export const FAQ = () => {
   return (
     <section
       id="faq"
-      className="container py-24 sm:py-32  px-8"
+      className="container py-24 sm:py-32 px-4 md:px-8"
     >
       <div className="flex items-center justify-center gap-4 mb-4 flex-wrap">
         <h2 className="text-3xl md:text-4xl font-bold p-4 bg-[#EC75FF50] rounded-2xl opacity-70 border-1 border-fuchsia-400">
           FAQ
         </h2>
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold text-center md:text-start">
           Perguntas Frequentes Sobre a Zypeer
         </h2>
       </div>

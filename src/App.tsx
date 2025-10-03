@@ -1,14 +1,12 @@
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/home'
-import { Routes } from 'react-router-dom'
-import PrivacyPolicyPage from './pages/liability-policy/page'
-import LiabilityPolicyPage from './pages/liability-policy/page'
+import { default as LiabilityPolicyPage, default as PrivacyPolicyPage } from './pages/liability-policy/page'
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="dark:bg-black dark:text-white flex flex-col items-center w-full">
+      <div className="dark:bg-black dark:text-white flex flex-col items-center w-full overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/edu/liability-policy" element={<PrivacyPolicyPage />} />
@@ -17,7 +15,6 @@ function App() {
           <Route path="/edu/privacy-policy.html" element={<LiabilityPolicyPage />} />
         </Routes>
       </div>
-
     </BrowserRouter>
   )
 }

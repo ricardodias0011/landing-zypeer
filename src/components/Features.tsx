@@ -3,8 +3,8 @@ import image1 from "../assets/screens/simulateds.jpg";
 import image2 from "../assets/screens/spaces.jpg";
 import image3 from "../assets/screens/tasks.jpg";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/swiper.css';
 // @ts-ignore
@@ -59,7 +59,7 @@ export const Features = () => {
   return (
     <section
       id="features"
-      className="container py-24 sm:py-32 space-y-8  px-8"
+      className="container py-24 sm:py-32 space-y-8  px-4 md:px-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold">
         Nossas {" "}

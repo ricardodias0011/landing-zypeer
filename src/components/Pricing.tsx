@@ -1,8 +1,4 @@
-'use client';
-
-
 import Check from "@/assets/verify.svg";
-import { Button } from "@/components/ui/button";
 import {
   CardContent,
   CardDescription,
@@ -97,7 +93,7 @@ export const Pricing = () => {
       id="pricing"
       className="section-price w-full flex items-center justify-center"
     >
-      <div className="container py-24 sm:py-32 px-8">
+      <div className="container py-24 sm:py-32 px-4 md:px-8">
         <h2 className="text-center w-full bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-4xl font-bold">
           Navegue de forma ilimitada
         </h2>
@@ -136,9 +132,9 @@ export const Pricing = () => {
               </CardHeader>
 
               <CardContent>
-                <Button className="w-full rounded-lg bg-fuchsia-400" onClick={() => {
+                <button className="w-full rounded-lg bg-fuchsia-400 p-3 text- cursor-pointer" onClick={() => {
                   window.open(`https://edu.zypeer.com.br/auth/register?plan-type=${pricing.title}`, "_blank")
-                }}>{pricing.buttonText}</Button>
+                }}>{pricing.buttonText}</button>
               </CardContent>
               <CardFooter className="flex">
                 <div className="space-y-4">
