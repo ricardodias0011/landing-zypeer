@@ -39,10 +39,10 @@ export const Services = () => {
       <div className="shadow-effect" />
       <div className="flex flex-row gap-10 justify-center md:justify-between items-center flex-wrap w-full z-10">
         <div className="flex flex-col md:basis-1/2 w-full">
-          <h3 className="inline bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-4xl font-bold">
+          <h3 className="inline bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent text-center md:text-start bg-clip-text text-4xl font-bold">
             Aplicativo moderno
           </h3>
-          <p className=" text-xl mt-4 mb-8 max-w-md">
+          <p className=" text-xl mt-4 mb-8 max-w-md text-center md:text-start">
             Um app moderno com uma interface inovadora, simples e mágica.
           </p>
 

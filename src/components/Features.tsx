@@ -6,7 +6,8 @@ import image3 from "../assets/screens/tasks.jpg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
-import 'swiper/css';
+import 'swiper/swiper.css';
+// @ts-ignore
 import 'swiper/css/navigation';
 
 interface FeatureProps {

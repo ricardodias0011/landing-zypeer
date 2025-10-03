@@ -96,6 +96,12 @@ html {
   background-size: 300px, 800px;
 }
 
+.footer {
+  background:
+    url("./assets/ellpise-footer.png") no-repeat top/cover;
+  background-size: 100vw;
+}
+
 @media (max-width: 768px) {
   .section-price {
     background:
