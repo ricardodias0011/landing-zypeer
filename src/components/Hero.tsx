@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 export const Hero = () => {
   return (
     <>
-      <div className="mt-[40px] hero-section h-fit md:h-min-[100vh] w-full flex items-center justify-center" id="home">
+      <div className="mt-[40px] hero-section min-h-fit md:min-h-[100vh] w-full flex items-center justify-center" id="home">
         <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10 px-4  w-full">
           <div className="text-center lg:text-start space-y-6  w-full" data-aos="fade-right">
             <main className="text-5xl md:text-6xl font-bold">

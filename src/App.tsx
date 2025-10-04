@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
 import LiabilityPolicyPage from './pages/liability-policy/page';
+import { ZypeerLinks } from './pages/links';
 import PrivacyPolicyPage from './pages/privacy-policy/page';
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/edu/liability-policy.html" element={<LiabilityPolicyPage />} />
           <Route path="/edu/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/edu/privacy-policy.html" element={<PrivacyPolicyPage />} />
+          <Route path="/o/links" element={<ZypeerLinks />} />
         </Routes>
       </div>
     </BrowserRouter>

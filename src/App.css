@@ -123,3 +123,11 @@ html {
 .swiper {
   width: 100%;
 }
+
+.links-section {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
+    url("./assets/BANNER.png") no-repeat center/cover,
+    linear-gradient(180deg, #D050E2 0%, #ED6AFF 100%);
+
+}
