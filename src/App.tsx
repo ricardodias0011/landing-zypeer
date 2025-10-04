@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
-import { default as LiabilityPolicyPage, default as PrivacyPolicyPage } from './pages/liability-policy/page';
+import LiabilityPolicyPage from './pages/liability-policy/page';
+import PrivacyPolicyPage from './pages/privacy-policy/page';
 function App() {
   useEffect(() => {
     AOS.init({ duration: 500 });
@@ -14,10 +15,10 @@ function App() {
       <div className="dark:bg-black dark:text-white flex flex-col items-center w-full overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/edu/liability-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/edu/liability-policy.html" element={<PrivacyPolicyPage />} />
-          <Route path="/edu/privacy-policy" element={<LiabilityPolicyPage />} />
-          <Route path="/edu/privacy-policy.html" element={<LiabilityPolicyPage />} />
+          <Route path="/edu/liability-policy" element={<LiabilityPolicyPage />} />
+          <Route path="/edu/liability-policy.html" element={<LiabilityPolicyPage />} />
+          <Route path="/edu/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/edu/privacy-policy.html" element={<PrivacyPolicyPage />} />
         </Routes>
       </div>
     </BrowserRouter>

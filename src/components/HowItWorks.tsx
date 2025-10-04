@@ -1,6 +1,6 @@
+import type { JSX } from "react";
+import { GiftIcon, MapIcon, MedalIcon, PlaneIcon } from "../components/Icons";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
-import { JSX } from "react";
 
 interface FeatureProps {
   icon: JSX.Element;

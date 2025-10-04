@@ -22,13 +22,13 @@ const features: FeatureProps[] = [
   {
     title: "Simulados",
     description:
-      "Responda diversos simulados do enem e outros de graça.",
+      "Gerar e Responder diversos simulados do enem e outros de graça.",
     image: image1,
   },
   {
     title: "Ferramentas IA",
     description:
-      "Plano de aula/estudo, Correção de questões, Gerar imagem, Mapa mental e Muito mais.",
+      "Atividades, Plano de aula/estudo, Correção de questões, Gerar imagem, Mapa mental e Muito mais.",
     image: image5,
   },
   {
@@ -57,17 +57,17 @@ const features: FeatureProps[] = [
   }
 ];
 
-const featureList: string[] = [
-  "Plano de aula/estudo",
-  "Gerar simulados",
-  "Correção de questões",
-  "Analise de redação",
-  "Gerar imagem",
-  "Resumir assunto",
-  "Digitalizar imagem ou documento",
-  "Gerar slides",
-  "E muito mais"
-];
+// const featureList: string[] = [
+//   "Plano de aula/estudo",
+//   "Gerar simulados",
+//   "Correção de questões",
+//   "Analise de redação",
+//   "Gerar imagem",
+//   "Resumir assunto",
+//   "Digitalizar imagem ou documento",
+//   "Gerar slides",
+//   "E muito mais"
+// ];
 
 export const Features = () => {
   return (
@@ -120,13 +120,13 @@ export const Features = () => {
                 <div
                   className="absolute w-full h-full z-20"
                   style={{
-                    background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.80) 77.59%)"
+                    background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.95) 77.59%)"
                   }}
                 />
                 <img
                   src={image}
                   alt="About feature"
-                  className="w-full h-full absolute object-cover rounded-lg opacity-20"
+                  className="w-full h-full absolute object-cover rounded-lg opacity-45"
                 />
               </div>
             </SwiperSlide>

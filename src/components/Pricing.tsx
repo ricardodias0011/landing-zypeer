@@ -116,7 +116,7 @@ export const Pricing = () => {
               }
             >
               <CardHeader>
-                <h3 className="flex item-center justify-between inline bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-4xl font-bold">
+                <h3 className="flex item-center justify-between bg-gradient-to-r from-[#EC75FF]  to-[#C8A6FF] text-transparent bg-clip-text text-4xl font-bold">
                   {pricing.title}
                   {/* {pricing.popular === PopularPlanType.YES ? (
                   <Badge

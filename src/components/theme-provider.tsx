@@ -54,7 +54,7 @@ export function ThemeProvider({
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
+    setTheme: (_: Theme) => {
       setTheme("dark");
     },
   };

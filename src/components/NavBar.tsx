@@ -15,7 +15,6 @@ import {
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FaChalkboardUser, FaUser } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
 import { LogoIcon } from "./Icons";
 import { Button, buttonVariants } from "./ui/button";
 interface RouteProps {
@@ -47,7 +46,6 @@ const routeList: RouteProps[] = [
 ];
 
 export const Navbar = () => {
-  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const [activeSection, setActiveSection] = useState<string>("");
